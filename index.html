@@ -170,7 +170,7 @@
                   <span>Figma</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"  viewBox="0 0 20 21" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M17.256 5.744a.833.833 0 0 1 0 1.179l-8.333 8.333a.833.833 0 0 1-1.179 0l-4.167-4.167a.833.833 0 0 1 1.179-1.178l3.577 3.577 7.744-7.744a.833.833 0 0 1 1.179 0Z" clip-rule="evenodd"/></svg>
                 </li>
-                <li class="tools__item">
+                <li class="tools__item tools__item--success">
                   <span>Miro</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"  viewBox="0 0 20 21" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M17.256 5.744a.833.833 0 0 1 0 1.179l-8.333 8.333a.833.833 0 0 1-1.179 0l-4.167-4.167a.833.833 0 0 1 1.179-1.178l3.577 3.577 7.744-7.744a.833.833 0 0 1 1.179 0Z" clip-rule="evenodd"/></svg>
                 </li>
@@ -179,7 +179,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"  viewBox="0 0 20 21" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M17.256 5.744a.833.833 0 0 1 0 1.179l-8.333 8.333a.833.833 0 0 1-1.179 0l-4.167-4.167a.833.833 0 0 1 1.179-1.178l3.577 3.577 7.744-7.744a.833.833 0 0 1 1.179 0Z" clip-rule="evenodd"/></svg>
                 </li>
                 <li class="tools__item"><span>Gmail</span></li>
-                <li class="tools__item"><span>Google Meet</span></li>
+                <li class="tools__item tools__item--danger"><span>Google Meet</span></li>
               </ul>
             </div>
 
@@ -190,16 +190,16 @@
                   <span>FigJam</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"  viewBox="0 0 20 21" fill="none"><path fill="currentColor" fill-rule="evenodd" d="M17.256 5.744a.833.833 0 0 1 0 1.179l-8.333 8.333a.833.833 0 0 1-1.179 0l-4.167-4.167a.833.833 0 0 1 1.179-1.178l3.577 3.577 7.744-7.744a.833.833 0 0 1 1.179 0Z" clip-rule="evenodd"/></svg>
                 </li>
-                <li class="tools__item"><span>Google calendar</span></li>
+                <li class="tools__item tools__item--success"><span>Google calendar</span></li>
                 <li class="tools__item"><span>Poline</span></li>
-                <li class="tools__item"><span>Adobe Illustrator</span></li>
+                <li class="tools__item tools__item--danger"><span>Adobe Illustrator</span></li>
               </ul>
             </div>
 
             <div class="tools__column">
               <h2 class="title tools__title">Редко</h2>
               <ul class="tools__list">
-                <li class="tools__item"><span>Photoshop</span></li>
+                <li class="tools__item tools__item--danger"><span>Photoshop</span></li>
               </ul>
             </div>
           </section>
@@ -211,6 +211,35 @@
           <p class="footer__copy"><span>&copy;&nbsp;2024</span> все права защищены</p>
         </div>
       </footer>
+
+      <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__wrapper">
+          <div class="modal__content">
+            <div class="modal__title">Напишите мне</div>
+            <button class="modal__close" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+
+            <form class="modal__form">
+              <div class="modal__field">
+                <label for="user-name" class="modal__label">Представтесь</label>
+                <input id="user-name" type="text" class="modal__input" placeholder="Как вас зовут?">
+              </div>
+              <div class="modal__field">
+                <label for="user-email" class="modal__label">Почта (для обратной связи)</label>
+                <input id="user-email" type="email" class="modal__input" placeholder="Ваш адрес электронной почты">
+              </div>
+              <div class="modal__field">
+                <label for="user-msg" class="modal__label">Сообщение</label>
+                <textarea id="user-msg" class="modal__input modal__textarea"></textarea>
+              </div>
+
+              <button class="modal__send" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 
