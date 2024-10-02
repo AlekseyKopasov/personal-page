@@ -117,6 +117,30 @@ body {
   text-decoration: none;
   color: var(--color-soft-peach);
   font-size: 18px;
+
+  border: 2px solid transparent;
+
+  transition: opacity 0.3s ease-in;
+}
+
+.main-nav__link:hover {
+  /* color: var(--color-burnt-orange); */
+  opacity: 0.6;
+}
+
+.main-nav__link:focus {
+  text-decoration: underline;
+}
+
+.main-nav__link:focus-visible {
+  color: var(--color-white);
+  outline: none;
+  border-color: #d9edd0;
+  border-radius: 4px;
+}
+
+.main-nav__link:active {
+    color: var(--color-burnt-orange);
 }
 
 .logout {
@@ -272,6 +296,7 @@ body {
 }
 
 .advantages__item {
+  position: relative;
   margin-bottom: 8px;
   padding: 3px 0;
   padding-left: 25px;
@@ -282,6 +307,21 @@ body {
 
   color: #272727;
   text-transform: lowercase;
+}
+
+.advantages__item::before {
+  content: "";
+
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background-color: var(--color-nero);
 }
 
 .advantages__item:last-child {
@@ -317,6 +357,7 @@ body {
 }
 
 .tools__item {
+  position: relative;
   margin-bottom: 5px;
   padding: 3px 10px;
   padding-left: 30px;
@@ -324,8 +365,31 @@ body {
   white-space: nowrap;
 }
 
-.tools__item:first-of-type {
-  /* text-transform: lowercase; */
+.tools__item--definition::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 2px;
+
+  transform: translate3d(0, 25%, 0);
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 4px;
+}
+
+.tools__item--check::before {
+  background-image: url("../img/icon_check.svg");
+  background-repeat: no-repeat;
+}
+
+.tools__item--like::before {
+  background-color: var(--color-peppermint);
+}
+
+.tools__item--dislike::before {
+  background-color: var(--color-cosmos);
 }
 
 .tools__item:last-child {
@@ -387,7 +451,7 @@ body {
   right: 0;
   left: 0;
   z-index: -1;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal__wrapper {
@@ -550,5 +614,11 @@ body {
 .modal__send:active {
   /* на элемент нажали */
   opacity: 0.6;
+}
+
+.is-active-link {
+  pointer-events: none;
+  color: #ff6e40;
+  cursor: initial;
 }
 
