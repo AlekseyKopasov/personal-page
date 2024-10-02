@@ -34,7 +34,7 @@
                 <li class="main-nav__item"><a href="#" class="main-nav__link">Главная</a></li>
                 <li class="main-nav__item"><a href="#" class="main-nav__link">Новости</a></li>
                 <li class="main-nav__item"><a href="#" class="main-nav__link">О нас</a></li>
-                <li class="main-nav__item"><a href="#" class="main-nav__link">Наша команда</a></li>
+                <li class="main-nav__item"><a href="#" class="main-nav__link is-active-link">Наша команда</a></li>
               </ul>
             </nav>
 
@@ -46,8 +46,14 @@
         <div class="main__wrapper">
           <div class="section user-info">
             <div class="user-info__avatar">
-              <img class="user-info__img" src="assets/img/avatar.jpg" width="130" height="130"
-                alt="Аватар Ивана Иванова">
+
+              <picture>
+                <source type="image/webp" srcset="assets/img/avatar@1x.webp 1x, assets/img/avatar@2x.webp 2x">
+                <img src="assets/img/avatar@1x.jpg" srcset="assets/img/avatar@1x.jpg 1x, assets/img/avatar@2x.jpg 2x" alt="Аватар Ивана Иванова">
+              </picture>
+
+              <!-- <img class="user-info__img" src="assets/img/avatar.jpg" width="130" height="130"
+                alt="Аватар Ивана Иванова"> -->
               <p class="user-info__name">Иван Иванов</p>
             </div>
             <ul class="user-info__properties">
@@ -151,13 +157,13 @@
             <div class="tools__column">
               <h2 class="title tools__title tools__title--terms">Инструменты:</h2>
               <ul class="tools__list">
-                <li class="tools__item">
+                <li class="tools__item tools__item--definition tools__item--check">
                   <span>Использует</span>
                 </li>
-                <li class="tools__item">
+                <li class="tools__item tools__item--definition tools__item--like">
                   <span>Нравится</span>
                 </li>
-                <li class="tools__item">
+                <li class="tools__item tools__item--definition tools__item--dislike">
                   <span>Не нравится</span>
                 </li>
               </ul>
@@ -241,6 +247,7 @@
         </div>
       </div>
     </div>
-  </body>
 
+    <script defer src="assets/script.js"></script>
+  </body>
 </html>
